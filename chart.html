@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <a href=""></a>
+    <title>My Chart JS</title>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Japan', 'China', 'Germany', 'Italy', 'Europe', 'USA'],
+                datasets: [{
+                    label: 'Countries',
+                    data: [7, 10, 3, 5, 2, 19],
+                    borderWidth: 1,
+                    borderColor: 'white',
+                    backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Countries with highest technology',
+                        font: {
+                            size: 30,
+                            weight: 'bold'
+                        },
+                        color: 'black'
+                    },
+                    legend: {
+                        position: "bottom",
+                        labels: {
+                            font: {
+                                size: 20
+                            },
+                            color: 'black'
+                        }
+                    },
+
+                },
+                
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Percentage',
+                            font: {
+                                size: 20,
+                                weight: 'bold'
+
+                            },
+                            color: 'green'
+                        }
+                    }
+                }
+            
+        );
+    </script>
+
+    <style>
+        .container {
+            width: 50%;
+            height: auto;
+            margin: auto;
+        }
+    </style>
+</body>
+
+</html>
